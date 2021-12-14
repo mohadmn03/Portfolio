@@ -1,0 +1,16 @@
+// Variables
+$main-color: #ffbc00;
+$light-color: #f4f4f4;
+$medium-color: #ccc;
+$dark-color: #333;
+$white-color: #fff;
+$bg-image: url("../dist/Images/showcase.jpg");
+$main-transition: all 0.3s;
+// set text color
+@function set-text-color($color){
+    @if(lightness($color) > 50){
+        @return black;
+    } @else{
+        @return white;
+    }
+}

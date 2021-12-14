@@ -1,0 +1,127 @@
+.container {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+}
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  margin-top: 0.8rem;
+}
+.text-center {
+  text-align: center;
+}
+// sections padding
+.py {
+  &-1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  &-2 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  &-3 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  &-4 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+// sections margin
+.my {
+  &-1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  &-2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  &-3 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  &-4 {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+}
+// buttons
+%btn-shared {
+  display: block;
+  width: fit-content;
+  margin: auto;
+  padding: 0.8rem 2rem;
+  transition: $main-transition;
+  border: none;
+  cursor: pointer;
+}
+.btn {
+  &-main {
+    @extend %btn-shared;
+    color: $dark-color;
+    background-color: $main-color;
+  }
+  &-light {
+    @extend %btn-shared;
+    color: $dark-color;
+    background-color: $light-color;
+  }
+  &-dark {
+    @extend %btn-shared;
+    color: $light-color;
+    background-color: $dark-color;
+  }
+}
+a[class^="btn-"]:hover,
+button[class^="btn-"]:hover,
+input[class^="btn-"]:hover {
+  background-color: $main-color;
+  color: $white-color;
+}
+// backgrounds
+.bg{
+  &-main{
+    background-color: $main-color;
+    color: set-text-color($main-color);
+  }
+  &-dark{
+    background-color: $dark-color;
+    color: set-text-color($dark-color);
+  }
+  &-light{
+    background-color: $light-color;
+    color: set-text-color($light-color);
+  }
+  &-medium{
+    background-color: $medium-color;
+    color: set-text-color($medium-color);
+  }
+}
+// section title
+.section-title {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: normal;
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+}
+.section-title::before {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $main-color;
+}
