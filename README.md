@@ -1,4 +1,5 @@
 # Portfolio
+# This project is just a sass application and learning, so it doesn't have a design that's very specific or responsive to all screens.
 This is a portfolio template [HTML/CSS/JS]
 
 A Friend of mine has a chairs business and wants me to create his website.
